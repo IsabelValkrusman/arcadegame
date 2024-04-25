@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../components/Loader';
@@ -22,15 +22,12 @@ const RegisterScreen = () => {
 
   const { userInfo } = useSelector((state) => state.auth);
 
-  const { search } = useLocation();
-  const sp = new URLSearchParams(search);
-  const redirect = sp.get('redirect') || '/';
-
   useEffect(() => {
     if (userInfo) {
-      navigate(redirect);
+      // Siin võid lisada koodi, mis suunab kasutaja pärast registreerimist soovitud asukohta.
+      // Näiteks: navigate('/');
     }
-  }, [navigate, redirect, userInfo]);
+  }, [navigate, userInfo]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -41,7 +38,8 @@ const RegisterScreen = () => {
       try {
         const res = await register({ name, email, password }).unwrap();
         dispatch(setCredentials({ ...res }));
-        navigate(redirect);
+        // Siin võid lisada koodi, mis suunab kasutaja pärast registreerimist soovitud asukohta.
+        // Näiteks: navigate('/');
       } catch (err) {
         toast.error(err?.data?.message || err.error);
       }
@@ -101,7 +99,7 @@ const RegisterScreen = () => {
       <Row className='py-3'>
         <Col>
           Already have an account?{' '}
-          <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
+          <Link to='/login'>
             Login
           </Link>
         </Col>

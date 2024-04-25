@@ -6,6 +6,9 @@ import {
   Route,
   RouterProvider
 } from 'react-router-dom'
+import {Provider} from 'react-redux'
+import { HelmetProvider } from 'react-helmet-async';
+import store from './store';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/index.css';
 import './assets/styles/bootstrap.custom.css';
@@ -41,7 +44,11 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </HelmetProvider>
   </React.StrictMode>
 );
 

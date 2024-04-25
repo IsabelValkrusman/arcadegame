@@ -9,10 +9,12 @@ import store from './store';
 import { ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
+
+
 const App = () => {
   return (
     <CartProvider>
-      <Provider store={store}>
+      
         <Header />
         <main className="py-3">
           <Container>
@@ -21,7 +23,7 @@ const App = () => {
         </main>
         <Footer />
         <ToastContainer />
-      </Provider> 
+      
     </CartProvider>
   );
 };
