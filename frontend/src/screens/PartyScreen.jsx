@@ -16,7 +16,7 @@ const PartyScreen = () => {
                     <div className="info-box" style={{ backgroundColor: "#000", fontFamily: 'shrift1', padding: "20px", borderRadius: "10px", color: "#fff" }}>
                         <h3>Peod ja Sündmused</h3>
                         <p>
-                            Korraldame meeleolukaid pidusid ja sündmusi kõigile vanusegruppidele. Olgu tegemist sünnipäevade, firmapidude või muude tähtpäevadega, pakume meelelahutust kõigile! Meie professionaalne meeskond tagab, et teie üritus saaks unustamatuks kogemuseks. Lisaks pakume erinevaid peopakette vastavalt teie soovidele ja eelarvele.
+                         Siia tulevad üritused.
                         </p>
                         <p>
                             Võtke meiega ühendust ja korraldame koos teie unistuste peo!
@@ -33,7 +33,7 @@ const PartyScreen = () => {
                     <div className="info-box" style={{ backgroundColor: "#000", fontFamily: 'shrift1', padding: "20px", borderRadius: "10px", color: "#fff" }}>
                         <h3>Peod ja Sündmused</h3>
                         <p>
-                            Korraldame meeleolukaid pidusid ja sündmusi kõigile vanusegruppidele. Olgu tegemist sünnipäevade, firmapidude või muude tähtpäevadega, pakume meelelahutust kõigile! Meie professionaalne meeskond tagab, et teie üritus saaks unustamatuks kogemuseks. Lisaks pakume erinevaid peopakette vastavalt teie soovidele ja eelarvele.
+                           Siia tulevad üritused.
                         </p>
                         <p>
                             Võtke meiega ühendust ja korraldame koos teie unistuste peo!
@@ -50,7 +50,7 @@ const PartyScreen = () => {
                     <div className="info-box" style={{ backgroundColor: "#000", fontFamily: 'shrift1', padding: "20px", borderRadius: "10px", color: "#fff" }}>
                         <h3>Peod ja Sündmused</h3>
                         <p>
-                            Korraldame meeleolukaid pidusid ja sündmusi kõigile vanusegruppidele. Olgu tegemist sünnipäevade, firmapidude või muude tähtpäevadega, pakume meelelahutust kõigile! Meie professionaalne meeskond tagab, et teie üritus saaks unustamatuks kogemuseks. Lisaks pakume erinevaid peopakette vastavalt teie soovidele ja eelarvele.
+                          Siia tulevad üritused.
                         </p>
                         <p>
                             Võtke meiega ühendust ja korraldame koos teie unistuste peo!

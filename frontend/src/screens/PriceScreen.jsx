@@ -1,44 +1,42 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
-import { useDispatch } from 'react-redux'; // Muudetud siin
-import { addToCart } from '../slices/cartSlice'; // Muudetud siin
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../slices/cartSlice';
 
 const PriceScreen = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch(); // Muudetud siin
+  const dispatch = useDispatch();
 
-  // Esimese toote koguse seotud seisund ja funktsioon
   const [quantity1, setQuantity1] = useState(1);
   const handleQuantityChange1 = (e) => {
-    setQuantity1(e.target.value);
+    setQuantity1(parseInt(e.target.value));
   };
 
-  // Teise toote koguse seotud seisund ja funktsioon
   const [quantity2, setQuantity2] = useState(1);
   const handleQuantityChange2 = (e) => {
-    setQuantity2(e.target.value);
+    setQuantity2(parseInt(e.target.value));
   };
 
   const addToCartHandler1 = () => {
     const item = {
-      id: 'toode1_' + Date.now(), // Unikaalne ID esimesele tootele
-      name: 'Toode1', // Muuda toote nimi vastavalt tegelikule tootele
-      price: 10,
-      qty: parseInt(quantity1),
+      id: 'toode1_' + Date.now(),
+      name: 'Täisksvanu pilet südaööni',
+      price: 10, // Hind 10 eurot
+      qty: quantity1,
     };
-    dispatch(addToCart(item)); // Muudetud siin
+    dispatch(addToCart(item));
     navigate('/cart');
   };
 
   const addToCartHandler2 = () => {
     const item = {
-      id: 'toode2_' + Date.now(), // Unikaalne ID teisele tootele
-      name: 'Toode2', // Muuda toote nimi vastavalt tegelikule tootele
-      price: 15,
-      qty: parseInt(quantity2),
+      id: 'toode2_' + Date.now(),
+      name: 'Täisksvanu pilet pärast südaööt',
+      price: 15, // Hind 15 eurot
+      qty: quantity2,
     };
-    dispatch(addToCart(item)); // Muudetud siin
+    dispatch(addToCart(item));
     navigate('/cart');
   };
 
